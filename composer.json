@@ -1,0 +1,16 @@
+{
+  "name": "dsavina/form-handler",
+  "description": "Interfaces along with implementations for handling forms",
+  "keywords": ["form","parsing","data validation"],
+  "homepage": "http://www.github.com/dsavina/form-handler",
+  "type" : "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dorian Savina",
+      "email": "d.savina@thecodingmachine.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
