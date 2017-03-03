@@ -15,9 +15,17 @@
     "php": ">=7.0",
     "mouf/tdbm-hydrator": "~1.0",
   },
+  "require-dev" : {
+    "phpunit/phpunit": "^5.4.6"
+  },
   "autoload": {
     "psr-4": {
       "FormHandler\\": "src"
+    }
+  },
+  "autoload-dev" : {
+    "psr-4" : {
+      "FormHandlerTest\\" : "tests"
     }
   },
   "minimum-stability": "dev",
