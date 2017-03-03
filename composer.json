@@ -13,6 +13,7 @@
   ],
   "require": {
     "php": ">=7.0",
+    "mouf/tdbm-hydrator": "~1.0",
   },
   "autoload": {
     "psr-4": {
