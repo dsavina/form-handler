@@ -1,13 +1,13 @@
 <?php
-namespace FormHandler\Parser;
+namespace Booya\Parser;
 
-use FormHandler\Exception\ParsingException;
+use Booya\Exception\ParsingException;
 
 /**
  * A parser handling primitive input values.
  *
  * Interface ParserInterface
- * @package FormHandler\Parser
+ * @package Booya\Parser
  */
 interface ParserInterface
 {

@@ -14,18 +14,21 @@
   "require": {
     "php": ">=7.0",
     "mouf/tdbm-hydrator": "~1.0",
+    "mouf/database.tdbm": "~4.2",
+    "mouf/utils.value.value-interface": "~1.0"
   },
   "require-dev" : {
-    "phpunit/phpunit": "^5.4.6"
+    "phpunit/phpunit": "^5.4.6",
+    "phpspec/prophecy": "~1.7"
   },
   "autoload": {
     "psr-4": {
-      "FormHandler\\": "src"
+      "Booya\\": "src"
     }
   },
   "autoload-dev" : {
     "psr-4" : {
-      "FormHandlerTest\\" : "tests"
+      "BooyaTest\\" : "tests"
     }
   },
   "minimum-stability": "dev",

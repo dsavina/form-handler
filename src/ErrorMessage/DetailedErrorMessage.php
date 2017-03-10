@@ -1,19 +1,14 @@
 <?php
-namespace FormHandler;
+namespace Booya\ErrorMessage;
 
 /**
  * A descriptor for a specific failure in form data parsing/validation.
  *
- * Class FieldError
- * @package FormHandler
+ * Class DetailedErrorMessage
+ * @package Booya\ErrorMessage
  */
-class FieldError implements \JsonSerializable
+class DetailedErrorMessage extends SimpleErrorMessage
 {
-    /** @var string */
-    private $error;
-    /** @return string */
-    public function getError() { return $this->error; }
-
     /** @var string */
     private $details;
     /** @return string */
@@ -21,12 +16,13 @@ class FieldError implements \JsonSerializable
 
     /**
      * FieldError constructor.
+     * @Important
      * @param string $error
      * @param string $details
      */
-    public function __construct($error = null, $details = null)
+    public function __construct($message = '', $details = '')
     {
-        $this->error = $error;
+        parent::__construct($message);
         $this->details = $details;
     }
 
@@ -36,7 +32,7 @@ class FieldError implements \JsonSerializable
     function jsonSerialize()
     {
         return [
-            'error' => $this->error,
+            'message' => $this->getMessage(),
             'details' => $this->details
         ];
     }

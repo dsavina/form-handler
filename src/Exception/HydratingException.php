@@ -1,13 +1,13 @@
 <?php
-namespace FormHandler\Exception;
+namespace Booya\Exception;
 
 /**
  * An exception containing the mapping of various errors in a form data.
  *
- * Class FormException
- * @package FormHandler\Exception
+ * Class HydratingException
+ * @package Booya\Exception
  */
-class FormException extends \Exception
+class HydratingException extends \Exception
 {
     /** @var array */
     private $errorsMap;

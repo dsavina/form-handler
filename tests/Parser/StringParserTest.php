@@ -1,16 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dorian
- * Date: 03/03/17
- * Time: 18:57
- */
+namespace BooyaTest\Parser;
 
-namespace FormHandlerTest\Parser;
-
-
-use FormHandler\Parser\StringParser;
-
+use Booya\Parser\StringParser;
 
 class StringParserTest extends \PHPUnit_Framework_TestCase
 {
@@ -18,8 +9,8 @@ class StringParserTest extends \PHPUnit_Framework_TestCase
     {
         $parser = new StringParser();
 
-        $val = $parser->parse('foo');
-        $val = $parser->parse(42);
-        $val = $parser->parse(4.2);
+        $parser->parse('foo');
+        $parser->parse(42);
+        $parser->parse(4.2);
     }
 }

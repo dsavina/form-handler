@@ -1,37 +1,28 @@
 <?php
+namespace Booya\Validator;
 
-namespace FormHandler\Validator;
-
-use FormHandler\Exception\InvalidFieldException;
-use FormHandler\FieldError;
+use Booya\Exception\InvalidFieldException;
 
 /**
  * An abstract validator throwing errors with fixed messages.
  *
  * Class AbstractValidator
- * @package FormHandler\Validator
+ * @package Booya\Validator
  */
 abstract class AbstractValidator implements ValidatorInterface
 {
-    /** @var string */
-    private $error;
+    /** @var mixed */
+    private $errorMessage;
     /** @return string */
-    public function getError() { return $this->error; }
-
-    /** @var string */
-    private $details;
-    /** @return string */
-    public function getDetails() { return $this->details; }
+    public function getErrorMessage() { return $this->errorMessage; }
 
     /**
      * AbstractValidator constructor.
-     * @param string $error
-     * @param string $details
+     * @param mixed $errorMessage
      */
-    public function __construct($error = "", $details = null)
+    public function __construct($errorMessage = "")
     {
-        $this->error = $error;
-        $this->details = $details;
+        $this->errorMessage = $errorMessage;
     }
 
     /**
@@ -39,6 +30,6 @@ abstract class AbstractValidator implements ValidatorInterface
      */
     protected function throw()
     {
-        throw new InvalidFieldException(new FieldError($this->error, $this->details));
+        throw new InvalidFieldException($this->errorMessage);
     }
 }

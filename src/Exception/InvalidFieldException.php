@@ -1,13 +1,11 @@
 <?php
-namespace FormHandler\Exception;
-
-use FormHandler\FieldError;
+namespace Booya\Exception;
 
 /**
  * An exception describing why some data was considered invalid.
  *
  * Class InvalidFieldException
- * @package FormHandler\Exception
+ * @package Booya\Exception
  */
 class InvalidFieldException extends \Exception
 {
@@ -18,7 +16,7 @@ class InvalidFieldException extends \Exception
 
     /**
      * InvalidFieldException constructor.
-     * @param FieldError|array $innerError
+     * @param mixed $innerError
      * @param string $message
      * @param int $code
      */

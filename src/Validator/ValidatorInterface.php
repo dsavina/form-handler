@@ -1,22 +1,21 @@
 <?php
-namespace FormHandler\Validator;
+namespace Booya\Validator;
 
-use FormHandler\Exception\InvalidFieldException;
+use Booya\Exception\InvalidFieldException;
 
 /**
- * A validator checking the sanity of a value.
+ * A validator should check the sanity of a value, given a context object, and throw an exception in case of failure.
  *
  * Interface ValidatorInterface
- * @package FormHandler\Validator
+ * @package Booya\Validator
  */
 interface ValidatorInterface
 {
     /**
      * @param mixed $value
-     * @param array $parsedData
-     * @param mixed $contextObject
+     * @param $contextObject
      *
      * @throws InvalidFieldException
      */
-    public function validate($value, $parsedData, $contextObject);
+    public function validate($value, $contextObject = null);
 }

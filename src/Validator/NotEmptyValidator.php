@@ -1,24 +1,23 @@
 <?php
-namespace FormHandler\Validator;
+namespace Booya\Validator;
 
-use FormHandler\Exception\InvalidFieldException;
+use Booya\Exception\InvalidFieldException;
 
 /**
  * A validator to refuse null or empty value
  *
  * Class NotEmptyValidator
- * @package FormHandler\Validator
+ * @package Booya\Validator
  */
 class NotEmptyValidator extends AbstractValidator
 {
     /**
      * @param mixed $value
-     * @param array $parsedData
      * @param mixed $contextObject
      *
      * @throws InvalidFieldException
      */
-    public function validate($value, $parsedData, $contextObject)
+    public function validate($value, $contextObject = null)
     {
         if ($value === '' || $value === null || $value === []) {
             $this->throw();

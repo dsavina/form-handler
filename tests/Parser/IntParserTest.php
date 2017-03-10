@@ -1,8 +1,8 @@
 <?php
-namespace FormHandlerTest\Parser;
+namespace BooyaTest\Parser;
 
-use FormHandler\Exception\ParsingException;
-use FormHandler\Parser\IntParser;
+use Booya\Exception\ParsingException;
+use Booya\Parser\IntParser;
 
 class IntParserTest extends \PHPUnit_Framework_TestCase
 {

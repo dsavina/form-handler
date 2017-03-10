@@ -1,10 +1,10 @@
 <?php
-namespace FormHandler\Exception;
+namespace Booya\Exception;
 
 /**
  * An exception raised when parsing a piece of json data has failed.
  *
  * Class ParsingException
- * @package FormHandler\Exception
+ * @package Booya\Exception
  */
-class ParsingException extends \Exception { }
+class ParsingException extends InvalidFieldException { }

@@ -1,6 +1,5 @@
 <?php
-
-namespace FormHandlerTest;
+namespace BooyaTest;
 
 class FooBar implements \JsonSerializable
 {

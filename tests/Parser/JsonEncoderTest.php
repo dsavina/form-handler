@@ -1,9 +1,9 @@
 <?php
-namespace FormHandlerTest\Parser;
+namespace BooyaTest\Parser;
 
-use FormHandler\Exception\ParsingException;
-use FormHandler\Parser\JsonEncoder;
-use FormHandlerTest\FooBar;
+use Booya\Exception\ParsingException;
+use Booya\Parser\JsonEncoder;
+use BooyaTest\FooBar;
 
 class JsonEncoderTest extends \PHPUnit_Framework_TestCase
 {
